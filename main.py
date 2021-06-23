@@ -7,6 +7,7 @@ cleaned_text = lower_case.translate(str.maketrans('','',string.punctuation))
 # splitting text into words
 tokenized_words = cleaned_text.split()
 print(tokenized_words)
+# remove words
 stop_words = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself",
               "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself",
               "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these",
