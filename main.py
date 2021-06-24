@@ -1,9 +1,10 @@
-#removing punctuation from data and make it lower case
+# removing punctuation from data and make it lower case
 import string
-text = open('read.txt',encoding='utf-8').read()
+
+text = open('read.txt', encoding='utf-8').read()
 lower_case = text.lower()
 # Removing punctuations
-cleaned_text = lower_case.translate(str.maketrans('','',string.punctuation))
+cleaned_text = lower_case.translate(str.maketrans('', '', string.punctuation))
 # splitting text into words
 tokenized_words = cleaned_text.split()
 print(tokenized_words)
@@ -27,7 +28,8 @@ for word in tokenized_words:
 print(final_words)
 
 emotion_list = []
-with open('emotions.txt','r') as file:
+with open('emotions.txt', 'r') as file:
     for line in file:
-        clear_line=line.replace('\n','')
-        print(clear_line)
+        clear_line = line.replace('\n', '').replace(',', '').replace("'", '').strip()
+        word, emotion = clear_line.split(':')
+        print("word :"+ word + " " + "Emotions :" + emotion)
