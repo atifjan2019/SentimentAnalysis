@@ -25,3 +25,9 @@ for word in tokenized_words:
         final_words.append(word)
 
 print(final_words)
+
+emotion_list = []
+with open('emotions.txt','r') as file:
+    for line in file:
+        clear_line=line.replace('\n','')
+        print(clear_line)
